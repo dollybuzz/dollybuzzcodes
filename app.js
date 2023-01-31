@@ -1,3 +1,5 @@
+//For the sake of ease, I am writing this project using the express server but the HTTP local server set up is shared below
+
 //Running server on express
 const express = require("express");
 const app = express();
@@ -16,6 +18,7 @@ app.listen("8082", "127.0.0.1", function() {
     console.log("Local Express Server is running...");
 });
 
+/*
 //Running server on http as suggested on node.js guide, ref: http6s://nodejs.org/en/docs/guides/getting-started-guide/
 const http = require('http');
 const url = require('url');
@@ -56,3 +59,4 @@ if (req.method == "GET") {
 server.listen(port, host, () => {
     console.log(`HTTP Server running locally at http://${host}:${port}/`);
 });
+*/

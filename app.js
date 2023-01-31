@@ -26,7 +26,7 @@ const server = http.createServer((req,res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
 
-//error handling
+//error handling, ref: https://stackoverflow.com/questions/55113447/node-js-http-server-routing
 req.on('error', err => {
     console.error(err);
     res.statusCode = 400;

@@ -19,9 +19,14 @@ app.get('/main', function(req,res) {
     res.send('another route');
 });
 
+//local server listener
+app.listen("8080", "127.0.0.1", () => {
+    console.log("Express server running locally");
+});
+
 //server listener
 app.listen(app.get('port'), app.get('host'), () => {
-    console.log(`Express Server is running on ${app.get('host')}:${app.get('port')}`);
+    console.log(`Express Server is running on Heroku at ${app.get('host')}:${app.get('port')}. View Logs in app.`);
 });
 
 /*

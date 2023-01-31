@@ -3,7 +3,7 @@
 //Express Configurations
 const express = require('express');
 const app = express();
-app.set('host', process.env.IP);
+app.set('host', process.env.IP || "0.0.0.0");
 app.set('port', process.env.PORT);
 
 //required since node doesn't render html or static files by default

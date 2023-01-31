@@ -1,21 +1,27 @@
 //For the sake of ease, I am writing this project using the express server but the HTTP local server set up is shared below
 
 //Running server on express
-const express = require("express");
+const express = require('express');
 const app = express();
+const host = '127.0.0.1';
+const port = 8082;
+
+//required since node doesn't render html or static files by default
+app.engine('html', require('ejs').renderFile); 
+app.use(express.static("public"));
 
 //routes
 app.get("/", function(req,res){
-    res.send("working well");
+    res.render("index.html");
 });
 
-app.get("/main", function(req,res) {
-    res.send("another route");
+app.get('/main', function(req,res) {
+    res.send('another route');
 });
 
 //server listener
-app.listen("8082", "127.0.0.1", function() {
-    console.log("Local Express Server is running...");
+app.listen(port, host, function() {
+    console.log(`Local Express Server is running on ${host}:${port}`);
 });
 
 /*

@@ -1,4 +1,4 @@
-//For the sake of ease, I am writing this project using the express server but the HTTP local server set up is shared below
+//For the sake of ease, I am writing this project using the express server but the node HTTP set up is shared below
 
 //Express Configurations
 const express = require('express');
@@ -30,7 +30,7 @@ app.listen(app.get('port'), app.get('host'), () => {
 });
 
 /*
-//Running server on http as suggested on node.js guide, ref: http6s://nodejs.org/en/docs/guides/getting-started-guide/
+//Running server on http as suggested on node.js guide, ref: https://nodejs.org/en/docs/guides/getting-started-guide/
 const http = require('http');
 const url = require('url');
 const port = 8081;
